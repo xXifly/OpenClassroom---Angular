@@ -1,0 +1,29 @@
+.titre {
+    display: inline-block;
+}
+
+.date {
+    float: right;
+    margin-top: 10px;
+}
+
+.btn-bar {
+    margin-top: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+.nbLike {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 5px;
+    vertical-align: middle;
+    touch-action: manipulation;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #aba9a9;
+    border-color: #878787;
+}
