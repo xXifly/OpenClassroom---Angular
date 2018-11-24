@@ -1,3 +1,4 @@
+<!-- On change la class en fonction du nombre de like -->
 <li [ngClass]="{'list-group-item': true, 'list-group-item-success': loveIts > 0, 'list-group-item-danger': loveIts < 0}">
 
   <div>
@@ -10,6 +11,7 @@
   <div></div>
 
   <div class="btn-bar">
+    <!-- Ces boutons permettent d'ajouter ou d'enlever un like en appelant les fonctions correspondantes -->
     <button class="btn btn-success" (click)="onLike()">Like it !</button>
     <button class="btn btn-danger" (click)="onDislike()">Don't like it !</button>
     <span class="nbLike">Nombre de like : {{ loveIts }}</span>

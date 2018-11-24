@@ -17,10 +17,12 @@ export class PostListItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Fonction permettant d'ajouter un like
   onLike(){
     this.loveIts++;
   }
 
+  // Fonction permettant d'enlever un like
   onDislike(){
     this.loveIts--;
   }

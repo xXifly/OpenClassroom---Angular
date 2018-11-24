@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  // Array contenant les différents posts
   posts = [
     { 
       title: 'Mon premier post',
