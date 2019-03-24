@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-post-list-item',
@@ -11,20 +12,27 @@ export class PostListItemComponent implements OnInit {
   @Input() content: string;
   @Input() created_at: Date;
   @Input() loveIts: number;
+  @Input() index: number;
 
-  constructor() { }
+
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
   }
 
   // Fonction permettant d'ajouter un like
   onLike(){
-    this.loveIts++;
+    this.postService.onLike(this.index);
   }
 
   // Fonction permettant d'enlever un like
   onDislike(){
-    this.loveIts--;
+    this.postService.onDislike(this.index);
+  }
+
+  onDelete(){
+    this.postService.deletePost(this.index);
+    this.postService.emitPostsSubject();
   }
 
 }

@@ -1,9 +1,21 @@
-<div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Mes posts</h2>
-        <!-- On appelle notre component 'post-list' en lui passant l'array posts -->
-        <app-post-list [posts]="posts"></app-post-list>
-      </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">Mon Super Blog</a>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="posts">Voir les posts</a></li>
+        <li routerLinkActive="active"><a routerLink="nouveau">Ecrire un post</a></li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
